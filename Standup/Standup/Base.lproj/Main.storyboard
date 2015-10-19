@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="1756.5" y="-62.25"/>
         </scene>
-        <!--Root View Controller-->
+        <!--History-->
         <scene sceneID="kni-FQ-LrC">
             <objects>
                 <tableViewController id="7Ak-2T-Gt5" sceneMemberID="viewController">
@@ -65,7 +65,7 @@
                             <outlet property="delegate" destination="7Ak-2T-Gt5" id="1Wc-tY-6TV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="JI8-tj-o6s"/>
+                    <navigationItem key="navigationItem" title="History" id="JI8-tj-o6s"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lPg-Wj-Xep" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
