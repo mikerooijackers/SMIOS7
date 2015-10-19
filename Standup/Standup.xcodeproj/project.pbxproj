@@ -13,7 +13,9 @@
 		0BDD8F891BD4CDFE0095FCE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BDD8F881BD4CDFE0095FCE9 /* Assets.xcassets */; };
 		0BDD8F971BD4CDFE0095FCE9 /* StandupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDD8F961BD4CDFE0095FCE9 /* StandupTests.swift */; };
 		0BDD8FA21BD4CDFE0095FCE9 /* StandupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDD8FA11BD4CDFE0095FCE9 /* StandupUITests.swift */; };
-		0BDD8FB81BD501FF0095FCE9 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BDD8FB71BD501FF0095FCE9 /* HealthKit.framework */; };
+		F50CE7471BD508390048B5A0 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50CE7461BD508390048B5A0 /* TodayViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F50CE7541BD50BEE0048B5A0 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F50CE73D1BD506FF0048B5A0 /* Charts.framework */; };
+		F50CE7551BD50BEE0048B5A0 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F50CE73D1BD506FF0048B5A0 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +33,42 @@
 			remoteGlobalIDString = 0BDD8F7D1BD4CDFE0095FCE9;
 			remoteInfo = Standup;
 		};
+		F50CE73C1BD506FF0048B5A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F50CE7371BD506FF0048B5A0 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5BA8EC401A9D14DC00CE82E1;
+			remoteInfo = Charts;
+		};
+		F50CE73E1BD506FF0048B5A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F50CE7371BD506FF0048B5A0 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A52C5C371BAC5CA400594CDD;
+			remoteInfo = ChartsTV;
+		};
+		F50CE7561BD50BEE0048B5A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F50CE7371BD506FF0048B5A0 /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BA8EC3F1A9D14DC00CE82E1;
+			remoteInfo = Charts;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F50CE7581BD50BEE0048B5A0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F50CE7551BD50BEE0048B5A0 /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0BDD8F7E1BD4CDFE0095FCE9 /* Standup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Standup.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,7 +84,8 @@
 		0BDD8FA11BD4CDFE0095FCE9 /* StandupUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandupUITests.swift; sourceTree = "<group>"; };
 		0BDD8FA31BD4CDFE0095FCE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BDD8FB61BD4D3240095FCE9 /* Standup.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Standup.entitlements; sourceTree = "<group>"; };
-		0BDD8FB71BD501FF0095FCE9 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		F50CE7371BD506FF0048B5A0 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = SOURCE_ROOT; };
+		F50CE7461BD508390048B5A0 /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BDD8FB81BD501FF0095FCE9 /* HealthKit.framework in Frameworks */,
+				F50CE7541BD50BEE0048B5A0 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,9 +117,9 @@
 		0BDD8F751BD4CDFE0095FCE9 = {
 			isa = PBXGroup;
 			children = (
-				0BDD8FB71BD501FF0095FCE9 /* HealthKit.framework */,
 				0BDD8F801BD4CDFE0095FCE9 /* Standup */,
 				0BDD8F951BD4CDFE0095FCE9 /* StandupTests */,
+				F50CE7371BD506FF0048B5A0 /* Charts.xcodeproj */,
 				0BDD8FA01BD4CDFE0095FCE9 /* StandupUITests */,
 				0BDD8F7F1BD4CDFE0095FCE9 /* Products */,
 			);
@@ -100,6 +138,7 @@
 		0BDD8F801BD4CDFE0095FCE9 /* Standup */ = {
 			isa = PBXGroup;
 			children = (
+				F50CE7451BD507EA0048B5A0 /* ViewControllers */,
 				0BDD8FB61BD4D3240095FCE9 /* Standup.entitlements */,
 				0BDD8F811BD4CDFE0095FCE9 /* AppDelegate.swift */,
 				0BDD8F831BD4CDFE0095FCE9 /* ViewController.swift */,
@@ -128,6 +167,23 @@
 			path = StandupUITests;
 			sourceTree = "<group>";
 		};
+		F50CE7381BD506FF0048B5A0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F50CE73D1BD506FF0048B5A0 /* Charts.framework */,
+				F50CE73F1BD506FF0048B5A0 /* ChartsTV.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F50CE7451BD507EA0048B5A0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F50CE7461BD508390048B5A0 /* TodayViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,10 +194,12 @@
 				0BDD8F7A1BD4CDFE0095FCE9 /* Sources */,
 				0BDD8F7B1BD4CDFE0095FCE9 /* Frameworks */,
 				0BDD8F7C1BD4CDFE0095FCE9 /* Resources */,
+				F50CE7581BD50BEE0048B5A0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F50CE7571BD50BEE0048B5A0 /* PBXTargetDependency */,
 			);
 			name = Standup;
 			productName = Standup;
@@ -198,7 +256,7 @@
 						DevelopmentTeam = UWTAA8VL2P;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -212,7 +270,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0BDD8F791BD4CDFE0095FCE9 /* Build configuration list for PBXProject "Standup" */;
+			buildConfigurationList = 0BDD8F791BD4CDFE0095FCE9 /* Build configuration list for PBXProject "standup" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -223,6 +281,12 @@
 			mainGroup = 0BDD8F751BD4CDFE0095FCE9;
 			productRefGroup = 0BDD8F7F1BD4CDFE0095FCE9 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F50CE7381BD506FF0048B5A0 /* Products */;
+					ProjectRef = F50CE7371BD506FF0048B5A0 /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				0BDD8F7D1BD4CDFE0095FCE9 /* Standup */,
@@ -231,6 +295,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F50CE73D1BD506FF0048B5A0 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = F50CE73C1BD506FF0048B5A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F50CE73F1BD506FF0048B5A0 /* ChartsTV.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ChartsTV.framework;
+			remoteRef = F50CE73E1BD506FF0048B5A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0BDD8F7C1BD4CDFE0095FCE9 /* Resources */ = {
@@ -265,6 +346,7 @@
 			files = (
 				0BDD8F841BD4CDFE0095FCE9 /* ViewController.swift in Sources */,
 				0BDD8F821BD4CDFE0095FCE9 /* AppDelegate.swift in Sources */,
+				F50CE7471BD508390048B5A0 /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +378,11 @@
 			isa = PBXTargetDependency;
 			target = 0BDD8F7D1BD4CDFE0095FCE9 /* Standup */;
 			targetProxy = 0BDD8F9E1BD4CDFE0095FCE9 /* PBXContainerItemProxy */;
+		};
+		F50CE7571BD50BEE0048B5A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = F50CE7561BD50BEE0048B5A0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -398,8 +485,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Standup/Standup.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Standup/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.fontys.HealthKit.Standup;
@@ -411,8 +498,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Standup/Standup.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Standup/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.fontys.HealthKit.Standup;
@@ -471,7 +558,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0BDD8F791BD4CDFE0095FCE9 /* Build configuration list for PBXProject "Standup" */ = {
+		0BDD8F791BD4CDFE0095FCE9 /* Build configuration list for PBXProject "standup" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0BDD8FA41BD4CDFE0095FCE9 /* Debug */,

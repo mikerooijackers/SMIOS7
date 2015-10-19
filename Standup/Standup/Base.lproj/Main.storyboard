@@ -2,39 +2,91 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="b4u-qQ-m8d">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Today View Controller-->
         <scene sceneID="lNg-HT-4Fa">
             <objects>
-                <viewController id="33C-oT-aBY" sceneMemberID="viewController">
+                <viewController id="33C-oT-aBY" customClass="TodayViewController" customModule="Standup" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="emK-QO-NJU"/>
                         <viewControllerLayoutGuide type="bottom" id="ut0-GI-AqM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WZd-gF-yrR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fiK-3l-f8l" userLabel="Pie Chart View" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="715" id="65z-lz-fad"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="360" id="7Wh-N0-6vt"/>
+                                    <constraint firstAttribute="width" secondItem="fiK-3l-f8l" secondAttribute="height" multiplier="72:143" id="7oI-ox-8EB"/>
+                                    <constraint firstAttribute="width" constant="360" id="w5e-us-Mng"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="65z-lz-fad"/>
+                                        <exclude reference="7Wh-N0-6vt"/>
+                                        <exclude reference="7oI-ox-8EB"/>
+                                        <exclude reference="w5e-us-Mng"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="28" width="360" height="515"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="20" y="28" width="360" height="715"/>
+                                    <mask key="constraints">
+                                        <include reference="65z-lz-fad"/>
+                                        <include reference="7Wh-N0-6vt"/>
+                                        <include reference="7oI-ox-8EB"/>
+                                        <include reference="w5e-us-Mng"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="fiK-3l-f8l"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="fiK-3l-f8l"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <tabBarItem key="tabBarItem" systemItem="recents" id="VUt-0l-pWV"/>
+                    <connections>
+                        <outlet property="pieChartView" destination="fiK-3l-f8l" id="9bK-T2-www"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pt1-2S-83P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1756.5" y="-62.25"/>
+            <point key="canvasLocation" x="1756.5" y="-63"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="kni-FQ-LrC">
             <objects>
                 <tableViewController id="7Ak-2T-Gt5" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="NBh-F6-v1k">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="GI2-rP-T62">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GI2-rP-T62" id="fav-Ol-Hfb">
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </tableViewCellContentView>
