@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B9E682F1BE75A3E00A61991 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9E682E1BE75A3E00A61991 /* HistoryTableViewController.swift */; };
 		0BDD8F821BD4CDFE0095FCE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDD8F811BD4CDFE0095FCE9 /* AppDelegate.swift */; };
 		0BDD8F841BD4CDFE0095FCE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDD8F831BD4CDFE0095FCE9 /* ViewController.swift */; };
 		0BDD8F871BD4CDFE0095FCE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BDD8F851BD4CDFE0095FCE9 /* Main.storyboard */; };
 		0BDD8F891BD4CDFE0095FCE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BDD8F881BD4CDFE0095FCE9 /* Assets.xcassets */; };
 		0BDD8F971BD4CDFE0095FCE9 /* StandupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDD8F961BD4CDFE0095FCE9 /* StandupTests.swift */; };
 		0BDD8FA21BD4CDFE0095FCE9 /* StandupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDD8FA11BD4CDFE0095FCE9 /* StandupUITests.swift */; };
-		F50CE7471BD508390048B5A0 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50CE7461BD508390048B5A0 /* TodayViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F50CE7471BD508390048B5A0 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50CE7461BD508390048B5A0 /* TodayViewController.swift */; };
 		F50CE7541BD50BEE0048B5A0 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F50CE73D1BD506FF0048B5A0 /* Charts.framework */; };
 		F50CE7551BD50BEE0048B5A0 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F50CE73D1BD506FF0048B5A0 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -71,6 +72,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B9E682E1BE75A3E00A61991 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		0BDD8F7E1BD4CDFE0095FCE9 /* Standup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Standup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BDD8F811BD4CDFE0095FCE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BDD8F831BD4CDFE0095FCE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				F50CE7461BD508390048B5A0 /* TodayViewController.swift */,
+				0B9E682E1BE75A3E00A61991 /* HistoryTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -270,7 +273,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0BDD8F791BD4CDFE0095FCE9 /* Build configuration list for PBXProject "standup" */;
+			buildConfigurationList = 0BDD8F791BD4CDFE0095FCE9 /* Build configuration list for PBXProject "Standup" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -344,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B9E682F1BE75A3E00A61991 /* HistoryTableViewController.swift in Sources */,
 				0BDD8F841BD4CDFE0095FCE9 /* ViewController.swift in Sources */,
 				0BDD8F821BD4CDFE0095FCE9 /* AppDelegate.swift in Sources */,
 				F50CE7471BD508390048B5A0 /* TodayViewController.swift in Sources */,
@@ -558,7 +562,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0BDD8F791BD4CDFE0095FCE9 /* Build configuration list for PBXProject "standup" */ = {
+		0BDD8F791BD4CDFE0095FCE9 /* Build configuration list for PBXProject "Standup" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0BDD8FA41BD4CDFE0095FCE9 /* Debug */,
