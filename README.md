@@ -20,3 +20,13 @@ nog steeds werkt de healtkit certificaat niet.
 ook zijn de devices nog niet toegevoegd.
 
 ![alt tag](https://github.com/mikerooijackers/SMIOS7/blob/master/diagram/database.png)
+
+Device is toegevoegd.
+Facebook toegang wordt gewijzigd.
+ze zeggen dat de code fout is.
+
+## Week 4
+Facebook moesten we whitelisten om dit te kunnen gebruiken.
+Facebook login werkt met automatische controlen en doorverwijzing naar tableview
+Healtykit hebben we toegang tot gekregen
+Merge conflicten op gelost.
