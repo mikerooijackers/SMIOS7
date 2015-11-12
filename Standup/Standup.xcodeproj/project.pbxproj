@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B206B7D1BF35FB100AAD6AB /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B206B7A1BF35FB100AAD6AB /* FBSDKCoreKit.framework */; };
+		0B206B7E1BF35FB100AAD6AB /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B206B7B1BF35FB100AAD6AB /* FBSDKLoginKit.framework */; };
+		0B206B7F1BF35FB100AAD6AB /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B206B7C1BF35FB100AAD6AB /* FBSDKShareKit.framework */; };
 		0B9E682F1BE75A3E00A61991 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9E682E1BE75A3E00A61991 /* HistoryTableViewController.swift */; };
 		0BDD8F821BD4CDFE0095FCE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDD8F811BD4CDFE0095FCE9 /* AppDelegate.swift */; };
 		0BDD8F841BD4CDFE0095FCE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDD8F831BD4CDFE0095FCE9 /* ViewController.swift */; };
@@ -76,6 +79,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B206B7A1BF35FB100AAD6AB /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		0B206B7B1BF35FB100AAD6AB /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		0B206B7C1BF35FB100AAD6AB /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		0B9E682E1BE75A3E00A61991 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		0BDD8F7E1BD4CDFE0095FCE9 /* Standup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Standup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BDD8F811BD4CDFE0095FCE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,8 +109,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B206B7F1BF35FB100AAD6AB /* FBSDKShareKit.framework in Frameworks */,
 				F50CE7541BD50BEE0048B5A0 /* Charts.framework in Frameworks */,
+<<<<<<< HEAD
 				F5FC873A1BF35530003DCDDE /* HealthKit.framework in Frameworks */,
+=======
+				0B206B7D1BF35FB100AAD6AB /* FBSDKCoreKit.framework in Frameworks */,
+				0B206B7E1BF35FB100AAD6AB /* FBSDKLoginKit.framework in Frameworks */,
+>>>>>>> master
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,7 +140,13 @@
 		0BDD8F751BD4CDFE0095FCE9 = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				F5FC87391BF35530003DCDDE /* HealthKit.framework */,
+=======
+				0B206B7A1BF35FB100AAD6AB /* FBSDKCoreKit.framework */,
+				0B206B7B1BF35FB100AAD6AB /* FBSDKLoginKit.framework */,
+				0B206B7C1BF35FB100AAD6AB /* FBSDKShareKit.framework */,
+>>>>>>> master
 				0BDD8F801BD4CDFE0095FCE9 /* Standup */,
 				0BDD8F951BD4CDFE0095FCE9 /* StandupTests */,
 				F50CE7371BD506FF0048B5A0 /* Charts.xcodeproj */,
@@ -521,9 +539,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+<<<<<<< HEAD
 				CODE_SIGN_ENTITLEMENTS = Standup/Standup.entitlements;
+=======
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+>>>>>>> master
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"~/Documents/FacebookSDK\"";
 				INFOPLIST_FILE = Standup/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -536,9 +559,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+<<<<<<< HEAD
 				CODE_SIGN_ENTITLEMENTS = Standup/Standup.entitlements;
+=======
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+>>>>>>> master
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"~/Documents/FacebookSDK\"";
 				INFOPLIST_FILE = Standup/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
