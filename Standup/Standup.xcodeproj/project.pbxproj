@@ -19,7 +19,8 @@
 		F50CE7551BD50BEE0048B5A0 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F50CE73D1BD506FF0048B5A0 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F5D2FBC21BEB564300F70AC9 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D2FBC11BEB564300F70AC9 /* Activity.swift */; settings = {ASSET_TAGS = (); }; };
 		F5D2FBC61BEB6F6200F70AC9 /* ActivityCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D2FBC51BEB6F6200F70AC9 /* ActivityCollection.swift */; settings = {ASSET_TAGS = (); }; };
-		F5D2FBCA1BEB921300F70AC9 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D2FBC91BEB921300F70AC9 /* HealthKit.framework */; };
+		F5FC873A1BF35530003DCDDE /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5FC87391BF35530003DCDDE /* HealthKit.framework */; };
+		F5FC873D1BF356F5003DCDDE /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FC873C1BF356F5003DCDDE /* HealthKitManager.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,7 +94,8 @@
 		F50CE7461BD508390048B5A0 /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		F5D2FBC11BEB564300F70AC9 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		F5D2FBC51BEB6F6200F70AC9 /* ActivityCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCollection.swift; sourceTree = "<group>"; };
-		F5D2FBC91BEB921300F70AC9 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		F5FC87391BF35530003DCDDE /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		F5FC873C1BF356F5003DCDDE /* HealthKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +104,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F50CE7541BD50BEE0048B5A0 /* Charts.framework in Frameworks */,
-				F5D2FBCA1BEB921300F70AC9 /* HealthKit.framework in Frameworks */,
+				F5FC873A1BF35530003DCDDE /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +128,7 @@
 		0BDD8F751BD4CDFE0095FCE9 = {
 			isa = PBXGroup;
 			children = (
-				F5D2FBC91BEB921300F70AC9 /* HealthKit.framework */,
+				F5FC87391BF35530003DCDDE /* HealthKit.framework */,
 				0BDD8F801BD4CDFE0095FCE9 /* Standup */,
 				0BDD8F951BD4CDFE0095FCE9 /* StandupTests */,
 				F50CE7371BD506FF0048B5A0 /* Charts.xcodeproj */,
@@ -148,6 +150,7 @@
 		0BDD8F801BD4CDFE0095FCE9 /* Standup */ = {
 			isa = PBXGroup;
 			children = (
+				F5FC873B1BF356DD003DCDDE /* Healthkit */,
 				F5FAE0C51BE77AEC00A649E2 /* Model */,
 				F50CE7451BD507EA0048B5A0 /* ViewControllers */,
 				0BDD8FB61BD4D3240095FCE9 /* Standup.entitlements */,
@@ -203,6 +206,14 @@
 				F5D2FBC51BEB6F6200F70AC9 /* ActivityCollection.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		F5FC873B1BF356DD003DCDDE /* Healthkit */ = {
+			isa = PBXGroup;
+			children = (
+				F5FC873C1BF356F5003DCDDE /* HealthKitManager.swift */,
+			);
+			name = Healthkit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,7 +285,7 @@
 				TargetAttributes = {
 					0BDD8F7D1BD4CDFE0095FCE9 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = 2CFHU4EC9P;
+						DevelopmentTeam = UWTAA8VL2P;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
 								enabled = 1;
@@ -370,6 +381,7 @@
 				F5D2FBC61BEB6F6200F70AC9 /* ActivityCollection.swift in Sources */,
 				0BDD8F841BD4CDFE0095FCE9 /* ViewController.swift in Sources */,
 				0BDD8F821BD4CDFE0095FCE9 /* AppDelegate.swift in Sources */,
+				F5FC873D1BF356F5003DCDDE /* HealthKitManager.swift in Sources */,
 				F50CE7471BD508390048B5A0 /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -513,8 +525,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Standup/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.fontys.HealthKit.Standup;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.fontys.Healthkit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -527,8 +540,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Standup/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.fontys.HealthKit.Standup;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.fontys.Healthkit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

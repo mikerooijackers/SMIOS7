@@ -17,11 +17,40 @@ class TodayViewController: UIViewController{
     let months = ["1", "0", "1", "0", "1", "0"]
     let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0]
     
+    
+    
+    let healtkitManager : HealthKitManager = HealthKitManager();
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        healtkitManager.authorizeHealthKit { (success, error) -> Void in
+        self.setChart(self.months, values: self.unitsSold)
+
+            if success{
+                //let hkSampleType:HKSampleType = HKSampleType.correlationTypeForIdentifier(HKCorrelationTypeIdentifierFood)!
+                /*let hkSampleType:HKSampleType = HKSampleType.categoryTypeForIdentifier(HKCategoryTypeIdentifierAppleStandHour)!
+                
+                let query = HKSampleQuery(sampleType: hkSampleType, predicate: nil, limit: 80, sortDescriptors: nil, resultsHandler: { (query:HKSampleQuery, results:[HKSample]?, error:NSError?) -> Void in
+                    
+                    if let sample = results{
+                        
+                        
+                        
+                    }
+                 
+                })
+                
+                self.healtkitManager.healthKitStore.executeQuery(query)
+                
+                
+                print("Healthkit is connecte")*/
+
+            }
+        }
+        
         // Do any additional setup after loading the view.
         
-        setChart(months, values: unitsSold)
     }
     
     func setChart(dataPoints: [String], values: [Double]) {

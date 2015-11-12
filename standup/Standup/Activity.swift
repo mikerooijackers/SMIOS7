@@ -14,14 +14,17 @@ public class Activity{
     private let seconds_day = 86400.0;
     private let seconds_day_onepercent = 864.0;
     
+    
     enum ActivityType{
         case active
         case inactive
     }
     
+    
     let activityType : ActivityType!;
     let startDateTime : NSDate;
     let endDateTime : NSDate;
+    
     
     init(startDate : NSDate, endDate : NSDate, type : ActivityType){
         self.activityType = type;

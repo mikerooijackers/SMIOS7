@@ -18,6 +18,8 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Standup wil graag data lezen uit uw healthkit om uw activiteiten te bepalen.</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 </dict>

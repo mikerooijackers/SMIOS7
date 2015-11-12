@@ -13,10 +13,9 @@ import HealthKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let healthKitStore: HKHealthStore;
     
     override init() {
-        self.healthKitStore = HKHealthStore();
+       
     }
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
