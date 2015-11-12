@@ -20,10 +20,10 @@
 		F50CE7471BD508390048B5A0 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50CE7461BD508390048B5A0 /* TodayViewController.swift */; };
 		F50CE7541BD50BEE0048B5A0 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F50CE73D1BD506FF0048B5A0 /* Charts.framework */; };
 		F50CE7551BD50BEE0048B5A0 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F50CE73D1BD506FF0048B5A0 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F5D2FBC21BEB564300F70AC9 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D2FBC11BEB564300F70AC9 /* Activity.swift */; settings = {ASSET_TAGS = (); }; };
-		F5D2FBC61BEB6F6200F70AC9 /* ActivityCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D2FBC51BEB6F6200F70AC9 /* ActivityCollection.swift */; settings = {ASSET_TAGS = (); }; };
+		F5D2FBC21BEB564300F70AC9 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D2FBC11BEB564300F70AC9 /* Activity.swift */; };
+		F5D2FBC61BEB6F6200F70AC9 /* ActivityCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D2FBC51BEB6F6200F70AC9 /* ActivityCollection.swift */; };
 		F5FC873A1BF35530003DCDDE /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5FC87391BF35530003DCDDE /* HealthKit.framework */; };
-		F5FC873D1BF356F5003DCDDE /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FC873C1BF356F5003DCDDE /* HealthKitManager.swift */; settings = {ASSET_TAGS = (); }; };
+		F5FC873D1BF356F5003DCDDE /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FC873C1BF356F5003DCDDE /* HealthKitManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -533,8 +533,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Standup/Standup.entitlements;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Standup/Standup.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"~/Documents/FacebookSDK\"";
@@ -550,8 +550,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Standup/Standup.entitlements;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Standup/Standup.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"~/Documents/FacebookSDK\"";

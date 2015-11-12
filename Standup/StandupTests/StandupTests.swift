@@ -5,8 +5,6 @@
 //  Created by Mike Rooijackers on 19-10-15.
 //  Copyright © 2015 SMIOS7 Healthkit. All rights reserved.
 //
-import Foundation
-
 import XCTest
 @testable import Standup
 
@@ -139,9 +137,9 @@ class StandupTests: XCTestCase {
         self.activityCollection.addActivity(self.activites[1]);
         //1.15 = 4500
         let percentageActive = activityCollection.getPercentage(Activity.ActivityType.active)
-        let percentageInactive = activityCollection.getPercentage(Activity.ActivityType.inactive)
+      // let percentageInactive = activityCollection.getPercentage(Activity.ActivityType.inactive)
         
-        XCTAssertTrue(percentageActive == 5, "percentage moet 5.208 zijn maar is \(percentage)")
+        XCTAssertTrue(percentageActive == 5, "percentage moet 5.208 zijn maar is \(percentageActive)")
     }
     
     func testActivityPercentage(){

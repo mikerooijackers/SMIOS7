@@ -10,32 +10,71 @@ import UIKit;
 import Charts;
 import HealthKit;
 
-class TodayViewController: UIViewController{
+class TodayViewController : UIViewController{
     
     @IBOutlet weak var pieChartView: PieChartView!
     
     let months = ["1", "0", "1", "0", "1", "0"]
     let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0]
-    
-    
+    var startDate : NSDate!;
+    var endDate : NSDate!;
+    let calander : NSCalendar = NSCalendar.currentCalendar()
+
     
     let healtkitManager : HealthKitManager = HealthKitManager();
     
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        endDate = NSDate()
+        let today = NSDateComponents();
+        today.year = 2015
+        today.month = 11
+        today.day = 11
+        today.hour = 0;
+        today.minute = 0;
+        today.second = 1;
+        let todayEnd = NSDateComponents();
+        todayEnd.year = 2015
+        todayEnd.month = 11
+        todayEnd.day = 11
+        todayEnd.hour = 23;
+        todayEnd.minute = 59;
+        todayEnd.second = 59;
+        startDate = calander.dateFromComponents(today)!
+        endDate = calander.dateFromComponents(todayEnd)!
+    
+        
+        setChart(months, values: unitsSold)
+        
+        
         
         healtkitManager.authorizeHealthKit { (success, error) -> Void in
-        self.setChart(self.months, values: self.unitsSold)
 
             if success{
-                //let hkSampleType:HKSampleType = HKSampleType.correlationTypeForIdentifier(HKCorrelationTypeIdentifierFood)!
-                /*let hkSampleType:HKSampleType = HKSampleType.categoryTypeForIdentifier(HKCategoryTypeIdentifierAppleStandHour)!
                 
-                let query = HKSampleQuery(sampleType: hkSampleType, predicate: nil, limit: 80, sortDescriptors: nil, resultsHandler: { (query:HKSampleQuery, results:[HKSample]?, error:NSError?) -> Void in
+                let hkSampleType:HKSampleType = HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierStepCount)!
+                
+                // Create a predicate to set start/end date bounds of the query HKQueryOptionStrictStartDate
+                let predicate:NSPredicate = HKQuery.predicateForSamplesWithStartDate(self.startDate, endDate: self.endDate, options: HKQueryOptions.StrictEndDate)
+                let descriptors = [NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: true)]
+                
+                // Create a sort descriptor for sorting by start date
+                //let hkSampleType:HKSampleType = HKSampleType.correlationTypeForIdentifier(HKCorrelationTypeIdentifierFood)!
+                //let hkSampleType:HKSampleType = HKSampleType.categoryTypeForIdentifier(HKCategoryTypeIdentifierAppleStandHour)!
+                
+                let query = HKSampleQuery(sampleType: hkSampleType, predicate: predicate, limit: Int(HKObjectQueryNoLimit), sortDescriptors: descriptors, resultsHandler: { (query:HKSampleQuery, results:[HKSample]?, error:NSError?) -> Void in
+                    print("query executed")
+                    print(results!.count)
                     
-                    if let sample = results{
+                    if let samples = results{
                         
                         
+                        for sample in samples{
+                            print("\(sample.startDate.description) \(sample.endDate.description) " )
+                            // your code here
+                        }
                         
                     }
                  
@@ -44,13 +83,14 @@ class TodayViewController: UIViewController{
                 self.healtkitManager.healthKitStore.executeQuery(query)
                 
                 
-                print("Healthkit is connecte")*/
+                print("Healthkit is connected")
 
             }
-        }
+        
         
         // Do any additional setup after loading the view.
         
+    }
     }
     
     func setChart(dataPoints: [String], values: [Double]) {
