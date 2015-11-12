@@ -141,7 +141,7 @@ class StandupTests: XCTestCase {
         let percentageActive = activityCollection.getPercentage(Activity.ActivityType.active)
         let percentageInactive = activityCollection.getPercentage(Activity.ActivityType.inactive)
         
-        XCTAssertTrue(percentageActive == 5, "percentage moet 5.208 zijn maar is \(percentage)")
+        XCTAssertTrue(percentageActive == 5, "percentage moet 5.208 zijn maar is \(percentageActive)")
     }
     
     func testActivityPercentage(){
