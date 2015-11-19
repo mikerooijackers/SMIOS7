@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B206B7D1BF35FB100AAD6AB /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B206B7A1BF35FB100AAD6AB /* FBSDKCoreKit.framework */; };
-		0B206B7E1BF35FB100AAD6AB /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B206B7B1BF35FB100AAD6AB /* FBSDKLoginKit.framework */; };
-		0B206B7F1BF35FB100AAD6AB /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B206B7C1BF35FB100AAD6AB /* FBSDKShareKit.framework */; };
+		0B206B7D1BF35FB100AAD6AB /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B206B7A1BF35FB100AAD6AB /* FBSDKCoreKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		0B206B7E1BF35FB100AAD6AB /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B206B7B1BF35FB100AAD6AB /* FBSDKLoginKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		0B206B7F1BF35FB100AAD6AB /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B206B7C1BF35FB100AAD6AB /* FBSDKShareKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		0B9E682F1BE75A3E00A61991 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9E682E1BE75A3E00A61991 /* HistoryTableViewController.swift */; };
 		0BDD8F821BD4CDFE0095FCE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDD8F811BD4CDFE0095FCE9 /* AppDelegate.swift */; };
 		0BDD8F841BD4CDFE0095FCE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDD8F831BD4CDFE0095FCE9 /* ViewController.swift */; };
@@ -20,6 +20,7 @@
 		F50CE7471BD508390048B5A0 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50CE7461BD508390048B5A0 /* TodayViewController.swift */; };
 		F50CE7541BD50BEE0048B5A0 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F50CE73D1BD506FF0048B5A0 /* Charts.framework */; };
 		F50CE7551BD50BEE0048B5A0 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F50CE73D1BD506FF0048B5A0 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F526BF561BFDDDBC006BF7AE /* Drawrect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F526BF551BFDDDBC006BF7AE /* Drawrect.swift */; };
 		F5D2FBC21BEB564300F70AC9 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D2FBC11BEB564300F70AC9 /* Activity.swift */; };
 		F5D2FBC61BEB6F6200F70AC9 /* ActivityCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D2FBC51BEB6F6200F70AC9 /* ActivityCollection.swift */; };
 		F5FC873A1BF35530003DCDDE /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5FC87391BF35530003DCDDE /* HealthKit.framework */; };
@@ -98,6 +99,7 @@
 		0BDD8FB61BD4D3240095FCE9 /* Standup.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Standup.entitlements; sourceTree = "<group>"; };
 		F50CE7371BD506FF0048B5A0 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = SOURCE_ROOT; };
 		F50CE7461BD508390048B5A0 /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		F526BF551BFDDDBC006BF7AE /* Drawrect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Drawrect.swift; path = View/Drawrect.swift; sourceTree = "<group>"; };
 		F5D2FBC11BEB564300F70AC9 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		F5D2FBC51BEB6F6200F70AC9 /* ActivityCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCollection.swift; sourceTree = "<group>"; };
 		F5FC87391BF35530003DCDDE /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -162,6 +164,7 @@
 		0BDD8F801BD4CDFE0095FCE9 /* Standup */ = {
 			isa = PBXGroup;
 			children = (
+				F526BF511BFDDCB1006BF7AE /* View */,
 				F5FC873B1BF356DD003DCDDE /* Healthkit */,
 				F5FAE0C51BE77AEC00A649E2 /* Model */,
 				F50CE7451BD507EA0048B5A0 /* ViewControllers */,
@@ -209,6 +212,14 @@
 				0B9E682E1BE75A3E00A61991 /* HistoryTableViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F526BF511BFDDCB1006BF7AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F526BF551BFDDDBC006BF7AE /* Drawrect.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		F5FAE0C51BE77AEC00A649E2 /* Model */ = {
@@ -393,6 +404,7 @@
 				F5D2FBC61BEB6F6200F70AC9 /* ActivityCollection.swift in Sources */,
 				0BDD8F841BD4CDFE0095FCE9 /* ViewController.swift in Sources */,
 				0BDD8F821BD4CDFE0095FCE9 /* AppDelegate.swift in Sources */,
+				F526BF561BFDDDBC006BF7AE /* Drawrect.swift in Sources */,
 				F5FC873D1BF356F5003DCDDE /* HealthKitManager.swift in Sources */,
 				F50CE7471BD508390048B5A0 /* TodayViewController.swift in Sources */,
 			);

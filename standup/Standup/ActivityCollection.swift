@@ -17,6 +17,10 @@ class ActivityCollection {
         
     }
     
+    func clearActivities(){
+        activities.removeAll()
+    }
+    
     func addActivity(activity : Activity){
         if activity.activityType == Activity.ActivityType.active{
             self.addInactivity(activity);
