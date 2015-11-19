@@ -17,30 +17,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hDz-J3-2w5">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem title="Today" id="F6B-6Z-xWe">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="1qY-sz-ybR">
+                                            <connections>
+                                                <action selector="refreshClick:" destination="33C-oT-aBY" id="aEv-Em-of9"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nbN-JX-Mi7" customClass="PieChartView" customModule="Charts">
                                 <rect key="frame" x="185" y="177" width="240" height="128"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.4503587141" green="0.50727513000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rRh-pM-Sba" customClass="DrawRect" customModule="Standup" customModuleProvider="target">
+                                <rect key="frame" x="489" y="76" width="111" height="467"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="KCS-ib-X4R"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="nbN-JX-Mi7" firstAttribute="leading" secondItem="WZd-gF-yrR" secondAttribute="leadingMargin" constant="20" id="5ON-yV-HL4"/>
+                            <constraint firstItem="nbN-JX-Mi7" firstAttribute="top" secondItem="hDz-J3-2w5" secondAttribute="bottom" constant="20" id="8Pa-bN-OQW"/>
+                            <constraint firstItem="rRh-pM-Sba" firstAttribute="leading" secondItem="nbN-JX-Mi7" secondAttribute="trailing" constant="20" id="Nnt-av-qd6"/>
                             <constraint firstItem="ut0-GI-AqM" firstAttribute="top" secondItem="nbN-JX-Mi7" secondAttribute="bottom" constant="20" id="Qem-XE-haf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rRh-pM-Sba" secondAttribute="trailing" constant="-30" id="Vu2-dB-zrq"/>
                             <constraint firstItem="nbN-JX-Mi7" firstAttribute="top" secondItem="emK-QO-NJU" secondAttribute="bottom" constant="20" id="Wgk-VY-wVw"/>
+                            <constraint firstItem="hDz-J3-2w5" firstAttribute="leading" secondItem="WZd-gF-yrR" secondAttribute="leadingMargin" constant="-20" id="bIS-RB-OeU"/>
+                            <constraint firstItem="ut0-GI-AqM" firstAttribute="top" secondItem="rRh-pM-Sba" secondAttribute="bottom" constant="20" id="fsP-De-s9q"/>
+                            <constraint firstItem="rRh-pM-Sba" firstAttribute="top" secondItem="hDz-J3-2w5" secondAttribute="bottom" constant="20" id="gwv-dc-zt7"/>
+                            <constraint firstItem="rRh-pM-Sba" firstAttribute="height" secondItem="nbN-JX-Mi7" secondAttribute="height" id="gza-NX-PhY"/>
+                            <constraint firstItem="ut0-GI-AqM" firstAttribute="top" secondItem="rRh-pM-Sba" secondAttribute="bottom" id="jn6-el-vFK"/>
+                            <constraint firstItem="rRh-pM-Sba" firstAttribute="top" secondItem="hDz-J3-2w5" secondAttribute="bottom" id="oOI-de-17H"/>
+                            <constraint firstItem="hDz-J3-2w5" firstAttribute="top" secondItem="emK-QO-NJU" secondAttribute="bottom" id="rjX-gm-glf"/>
+                            <constraint firstItem="rRh-pM-Sba" firstAttribute="leading" secondItem="nbN-JX-Mi7" secondAttribute="trailing" constant="20" id="uVQ-DC-dp9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hDz-J3-2w5" secondAttribute="trailing" constant="-20" id="zDc-y1-HHu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nbN-JX-Mi7" secondAttribute="trailing" constant="20" id="zfr-Ug-0zg"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Wgk-VY-wVw"/>
+                                <exclude reference="zfr-Ug-0zg"/>
+                                <exclude reference="gwv-dc-zt7"/>
+                                <exclude reference="gza-NX-PhY"/>
+                                <exclude reference="fsP-De-s9q"/>
+                            </mask>
+                        </variation>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <tabBarItem key="tabBarItem" systemItem="recents" id="VUt-0l-pWV"/>
                     <connections>
+                        <outlet property="DayBreakDownRectangle" destination="rRh-pM-Sba" id="h8d-Zu-Y5X"/>
                         <outlet property="pieChartView" destination="nbN-JX-Mi7" id="2a6-Vz-a6f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pt1-2S-83P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2674.5" y="-63"/>
+            <point key="canvasLocation" x="2746" y="-57"/>
         </scene>
         <!--History-->
         <scene sceneID="kni-FQ-LrC">
