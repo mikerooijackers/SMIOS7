@@ -61,6 +61,13 @@
 	<dict>
 		<key>NSExceptionDomains</key>
 		<dict>
+			<key>mikerooijackers.nl</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
 			<key>facebook.com</key>
 			<dict>
 				<key>NSIncludesSubdomains</key>
