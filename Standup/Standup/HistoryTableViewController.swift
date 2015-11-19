@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class HistoryTableViewController: UITableViewController{
     @IBOutlet var historyTableView: UITableView!
@@ -19,22 +20,30 @@ class HistoryTableViewController: UITableViewController{
                 "18 oktober 2015  60%|40%",
                 "19 oktober 2015  30%|70%"]
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        Alamofire.request(.GET, "http://smios.mikerooijackers.nl/serviceselect.php")
+            .responseJSON { response in
+            if let JSON = response.result.value {
+                for var i = 0; i < JSON.count; i++ {
+                    print(JSON[i]["startTimeDate"])
+                    print(JSON[i]["endTimeDate"])
+                }
+            }
+        }
     }
-    
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
-    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return date.count
     }
-    
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as UITableViewCell
@@ -45,7 +54,6 @@ class HistoryTableViewController: UITableViewController{
         return cell
     }
     
-    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
@@ -53,4 +61,4 @@ class HistoryTableViewController: UITableViewController{
         print(date[row])
     }
     
-    }
+}

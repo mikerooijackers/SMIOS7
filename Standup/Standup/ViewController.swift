@@ -14,15 +14,11 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     @IBOutlet weak var loginButton: FBSDKLoginButton!
 
     
-    var data: NSArray = []
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         loginButton.delegate = self
         loginButton.readPermissions = ["public_profile", "email", "user_friends"]
-        data = dataOfJson("http://smios.mikerooijackers.nl/serviceselect.php")
-        print(data)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -70,13 +66,6 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
         print("user is logged out")
-    }
-    
-    func dataOfJson(url: String) -> NSArray {
-        var data = NSData(contentsOfURL: NSURL(string: url)!)
-        var error: NSError?
-        var jsonArray: NSArray = try! NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as! NSArray
-        return jsonArray
     }
 
 }
