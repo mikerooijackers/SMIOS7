@@ -35,9 +35,22 @@ class ActivityCollection {
         activities.append(activityNew)
     }
     
+    func getActiveAndInactivePercentageAsArray() -> [Int]{
+        
+        var values = [Int]()
+        values.append(getPercentage(Activity.ActivityType.active))
+        values.append(100 - values[0])
+
+        
+        return values
+        
+    }
+    
     func getPercentage(type : Activity.ActivityType) -> Int{
         
         var totalTimeInSec = 0.0;
+        
+        
         
         for activity in activities {
             if(activity.activityType == type){

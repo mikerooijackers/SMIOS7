@@ -14,11 +14,10 @@ class TodayViewController : UIViewController{
     
     @IBOutlet weak var pieChartView: PieChartView!
     
-    let months = ["1", "0", "1", "0", "1", "0"]
-    let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0]
     var startDate : NSDate!;
     var endDate : NSDate!;
     let calander : NSCalendar = NSCalendar.currentCalendar()
+    let activities = ActivityCollection()
 
     
     let healtkitManager : HealthKitManager = HealthKitManager();
@@ -27,28 +26,28 @@ class TodayViewController : UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+      //  let now = NSDate()
+       // let day = calander.ordinalityOfUnit(.CalendarUnitDay, inUnit: .CalendarUnitYear, forDate: now)
+
+        
+        
         endDate = NSDate()
         let today = NSDateComponents();
         today.year = 2015
         today.month = 11
-        today.day = 11
+        today.day = 12
         today.hour = 0;
         today.minute = 0;
         today.second = 1;
         let todayEnd = NSDateComponents();
         todayEnd.year = 2015
         todayEnd.month = 11
-        todayEnd.day = 11
+        todayEnd.day = 12
         todayEnd.hour = 23;
         todayEnd.minute = 59;
         todayEnd.second = 59;
         startDate = calander.dateFromComponents(today)!
         endDate = calander.dateFromComponents(todayEnd)!
-    
-        
-        setChart(months, values: unitsSold)
-        
-        
         
         healtkitManager.authorizeHealthKit { (success, error) -> Void in
 
@@ -70,57 +69,65 @@ class TodayViewController : UIViewController{
                     
                     if let samples = results{
                         
+                      /*  let todayStart = NSDateComponents();
+                        todayStart.hour = 0;
+                        todayStart.minute = 0;
+                        todayStart.second = 1;
+                        
+                        let todayEnd = NSDateComponents();
+                        todayEnd.hour = 23;
+                        todayEnd.minute = 59;
+                        todayEnd.second = 59;
+
+                        
+                        
+                        let todayStartDate : NSDate = self.calander.dateFromComponents(todayStart)!;
+                        let todayEndDate : NSDate = self.calander.dateFromComponents(todayEnd)!;
+                        */
+                        
+                        //let activity : Activity = Activity(startDate: todayStartDate, endDate: todayEndDate, type: .active)
+                        
+                        //self.activities.addActivity(activity)
                         
                         for sample in samples{
+                            self.activities.addActivity(Activity(startDate: sample.startDate, endDate: sample.endDate, type: .active))
                             print("\(sample.startDate.description) \(sample.endDate.description) " )
-                            // your code here
+                            
+                            
                         }
+                        self.setChart(["Active", "Inactive"], values: self.activities.getActiveAndInactivePercentageAsArray())
+
                         
                     }
                  
                 })
                 
                 self.healtkitManager.healthKitStore.executeQuery(query)
-                
-                
-                print("Healthkit is connected")
-
             }
-        
-        
-        // Do any additional setup after loading the view.
-        
     }
     }
     
-    func setChart(dataPoints: [String], values: [Double]) {
+    func setChart(dataPoints: [String], values: [Int]) {
         
         var dataEntries: [ChartDataEntry] = []
         
         for i in 0..<dataPoints.count {
-            let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
+            let dataEntry = ChartDataEntry(value: Double(values[i]), xIndex: i)
             dataEntries.append(dataEntry)
         }
         pieChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0, easingOption: .EaseInBounce)
         
-        let pieChartDataSet = PieChartDataSet(yVals: dataEntries, label: "Units Sold")
+        let pieChartDataSet = PieChartDataSet(yVals: dataEntries, label: "activity")
         let pieChartData = PieChartData(xVals: dataPoints, dataSet: pieChartDataSet)
         pieChartView.data = pieChartData
-        pieChartView.centerText = "Hello, I'm center text";
+        pieChartView.descriptionText = ""
+       // pieChartView.centerText = "Hello, I'm center text";
         
         
         var colors: [UIColor] = []
+        colors.append(UIColor( red: 0, green: 0, blue: 255, alpha: 1));
+        colors.append(UIColor( red: 255, green: 0, blue: 0, alpha: 1));
         
-        //for _ in 0..<dataPoints.count {
-            
-            for(var i = 0; i < dataPoints.count; i++){
-                if(months[i] == "1"){
-                    colors.append(UIColor( red: 0, green: 0, blue: 255, alpha: 1));
-                }else{
-                    colors.append(UIColor( red: 255, green: 0, blue: 0, alpha: 1));
-
-                }
-            }
             
             
             //let red = Double(arc4random_uniform(256))
@@ -130,10 +137,9 @@ class TodayViewController : UIViewController{
             //let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
             //colors.append(color)
         //}
+        pieChartView.legend.enabled = false
         
         pieChartDataSet.colors = colors
-       
-        
     }
     
     
