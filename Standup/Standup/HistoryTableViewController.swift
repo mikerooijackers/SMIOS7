@@ -30,8 +30,10 @@ class HistoryTableViewController: UITableViewController{
             .responseJSON { response in
             if let JSON = response.result.value {
                 for var i = 0; i < JSON.count; i++ {
-                    print(JSON[i]["startTimeDate"])
-                    print(JSON[i]["endTimeDate"])
+                    let startTime = JSON[i]["startTimeDate"]
+                    let endTime = JSON[i]["endTimeDate"]
+                    print(startTime)
+                    print(endTime)
                 }
             }
         }

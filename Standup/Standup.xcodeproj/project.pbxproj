@@ -11,11 +11,13 @@
 		0B206B7E1BF35FB100AAD6AB /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B206B7B1BF35FB100AAD6AB /* FBSDKLoginKit.framework */; };
 		0B206B7F1BF35FB100AAD6AB /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B206B7C1BF35FB100AAD6AB /* FBSDKShareKit.framework */; };
 		0B9C6D8D1BFDC62E00DE74B5 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5FC87391BF35530003DCDDE /* HealthKit.framework */; };
-		0B9C6D8E1BFDC62E00DE74B5 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B206B7A1BF35FB100AAD6AB /* FBSDKCoreKit.framework */; };
-		0B9C6D8F1BFDC62E00DE74B5 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B206B7B1BF35FB100AAD6AB /* FBSDKLoginKit.framework */; };
-		0B9C6D901BFDC62E00DE74B5 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B206B7C1BF35FB100AAD6AB /* FBSDKShareKit.framework */; };
 		0B9C6DF11BFDE7FC00DE74B5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9C6DE41BFDE7CC00DE74B5 /* Alamofire.framework */; };
 		0B9C6DF21BFDE7FC00DE74B5 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9C6DE41BFDE7CC00DE74B5 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0B9C6DF51BFDF2E300DE74B5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9C6DE41BFDE7CC00DE74B5 /* Alamofire.framework */; };
+		0B9C6DF61BFDF2E900DE74B5 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F50CE73D1BD506FF0048B5A0 /* Charts.framework */; };
+		0B9C6DF71BFDF36000DE74B5 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B206B7A1BF35FB100AAD6AB /* FBSDKCoreKit.framework */; };
+		0B9C6DF81BFDF36000DE74B5 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B206B7B1BF35FB100AAD6AB /* FBSDKLoginKit.framework */; };
+		0B9C6DF91BFDF36000DE74B5 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B206B7C1BF35FB100AAD6AB /* FBSDKShareKit.framework */; };
 		0B9E682F1BE75A3E00A61991 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9E682E1BE75A3E00A61991 /* HistoryTableViewController.swift */; };
 		0BDD8F821BD4CDFE0095FCE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDD8F811BD4CDFE0095FCE9 /* AppDelegate.swift */; };
 		0BDD8F841BD4CDFE0095FCE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDD8F831BD4CDFE0095FCE9 /* ViewController.swift */; };
@@ -186,10 +188,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B9C6D901BFDC62E00DE74B5 /* FBSDKShareKit.framework in Frameworks */,
+				0B9C6DF71BFDF36000DE74B5 /* FBSDKCoreKit.framework in Frameworks */,
+				0B9C6DF81BFDF36000DE74B5 /* FBSDKLoginKit.framework in Frameworks */,
+				0B9C6DF91BFDF36000DE74B5 /* FBSDKShareKit.framework in Frameworks */,
+				0B9C6DF61BFDF2E900DE74B5 /* Charts.framework in Frameworks */,
+				0B9C6DF51BFDF2E300DE74B5 /* Alamofire.framework in Frameworks */,
 				0B9C6D8D1BFDC62E00DE74B5 /* HealthKit.framework in Frameworks */,
-				0B9C6D8E1BFDC62E00DE74B5 /* FBSDKCoreKit.framework in Frameworks */,
-				0B9C6D8F1BFDC62E00DE74B5 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
