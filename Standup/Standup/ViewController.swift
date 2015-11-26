@@ -9,6 +9,7 @@
 import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
+import Alamofire
 
 class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     @IBOutlet weak var loginButton: FBSDKLoginButton!
@@ -19,6 +20,8 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         loginButton.delegate = self
         loginButton.readPermissions = ["public_profile", "email", "user_friends"]
+        print(FBSDKAccessToken.currentAccessToken().userID)
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -61,12 +64,20 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
             let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
             
             appDelegate.window?.rootViewController = todayViewControllerNav
+            print(FBSDKAccessToken.currentAccessToken().userID)
+            sendData(FBSDKAccessToken.currentAccessToken().userID)
         }
     }
     
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
         print("user is logged out")
     }
-
+    
+    func sendData(facebookID:String) {
+        print(facebookID)
+        Alamofire.request(Alamofire.Method.GET, "http://smios.mikerooijackers.nl/servicequery.php", parameters: ["facebookID": facebookID])
+    }
+    
+    
 }
 
