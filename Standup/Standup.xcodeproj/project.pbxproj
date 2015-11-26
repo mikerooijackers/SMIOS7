@@ -29,6 +29,8 @@
 		F50CE7541BD50BEE0048B5A0 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F50CE73D1BD506FF0048B5A0 /* Charts.framework */; };
 		F50CE7551BD50BEE0048B5A0 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F50CE73D1BD506FF0048B5A0 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F526BF561BFDDDBC006BF7AE /* Drawrect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F526BF551BFDDDBC006BF7AE /* Drawrect.swift */; };
+		F56970461C07216B005E5E03 /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56970451C07216B005E5E03 /* DateFormat.swift */; };
+		F56970511C072647005E5E03 /* HistoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56970501C072647005E5E03 /* HistoryDetailViewController.swift */; };
 		F5D2FBC21BEB564300F70AC9 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D2FBC11BEB564300F70AC9 /* Activity.swift */; };
 		F5D2FBC61BEB6F6200F70AC9 /* ActivityCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D2FBC51BEB6F6200F70AC9 /* ActivityCollection.swift */; };
 		F5FC873A1BF35530003DCDDE /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5FC87391BF35530003DCDDE /* HealthKit.framework */; };
@@ -166,6 +168,8 @@
 		F50CE7371BD506FF0048B5A0 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = SOURCE_ROOT; };
 		F50CE7461BD508390048B5A0 /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		F526BF551BFDDDBC006BF7AE /* Drawrect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Drawrect.swift; path = View/Drawrect.swift; sourceTree = "<group>"; };
+		F56970451C07216B005E5E03 /* DateFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
+		F56970501C072647005E5E03 /* HistoryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryDetailViewController.swift; sourceTree = "<group>"; };
 		F5D2FBC11BEB564300F70AC9 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		F5D2FBC51BEB6F6200F70AC9 /* ActivityCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCollection.swift; sourceTree = "<group>"; };
 		F5FC87391BF35530003DCDDE /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -298,6 +302,7 @@
 			children = (
 				F50CE7461BD508390048B5A0 /* TodayViewController.swift */,
 				0B9E682E1BE75A3E00A61991 /* HistoryTableViewController.swift */,
+				F56970501C072647005E5E03 /* HistoryDetailViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -315,6 +320,7 @@
 			children = (
 				F5D2FBC11BEB564300F70AC9 /* Activity.swift */,
 				F5D2FBC51BEB6F6200F70AC9 /* ActivityCollection.swift */,
+				F56970451C07216B005E5E03 /* DateFormat.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -541,6 +547,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F56970511C072647005E5E03 /* HistoryDetailViewController.swift in Sources */,
 				F5D2FBC21BEB564300F70AC9 /* Activity.swift in Sources */,
 				0B9E682F1BE75A3E00A61991 /* HistoryTableViewController.swift in Sources */,
 				F5D2FBC61BEB6F6200F70AC9 /* ActivityCollection.swift in Sources */,
@@ -549,6 +556,7 @@
 				F526BF561BFDDDBC006BF7AE /* Drawrect.swift in Sources */,
 				F5FC873D1BF356F5003DCDDE /* HealthKitManager.swift in Sources */,
 				F50CE7471BD508390048B5A0 /* TodayViewController.swift in Sources */,
+				F56970461C07216B005E5E03 /* DateFormat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

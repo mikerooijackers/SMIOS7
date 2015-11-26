@@ -118,7 +118,7 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <segue destination="kEb-Bk-VB7" kind="show" id="QM6-y6-7r4"/>
+                                    <segue destination="kEb-Bk-VB7" kind="show" identifier="historySegue" id="QM6-y6-7r4"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -136,10 +136,10 @@
             </objects>
             <point key="canvasLocation" x="2746.5" y="663"/>
         </scene>
-        <!--View Controller-->
+        <!--History Detail View Controller-->
         <scene sceneID="bSd-MW-fop">
             <objects>
-                <viewController id="kEb-Bk-VB7" sceneMemberID="viewController">
+                <viewController id="kEb-Bk-VB7" customClass="HistoryDetailViewController" customModule="Standup" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="shA-H3-vo5"/>
                         <viewControllerLayoutGuide type="bottom" id="maI-yI-JnM"/>
@@ -147,9 +147,36 @@
                     <view key="view" contentMode="scaleToFill" id="TwW-Go-Hwz">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKE-s0-J7i">
+                                <rect key="frame" x="279" y="72" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j2j-5D-nBr" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="162" y="151" width="240" height="298"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YKE-s0-J7i" firstAttribute="top" secondItem="shA-H3-vo5" secondAttribute="bottom" constant="10" id="4bI-FG-gBx"/>
+                            <constraint firstItem="maI-yI-JnM" firstAttribute="top" secondItem="j2j-5D-nBr" secondAttribute="bottom" constant="10" id="4wO-kT-kve"/>
+                            <constraint firstItem="j2j-5D-nBr" firstAttribute="top" secondItem="YKE-s0-J7i" secondAttribute="bottom" constant="10" id="8fj-lA-PAS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YKE-s0-J7i" secondAttribute="trailing" constant="10" id="N8I-xv-GNB"/>
+                            <constraint firstItem="YKE-s0-J7i" firstAttribute="leading" secondItem="TwW-Go-Hwz" secondAttribute="leadingMargin" constant="10" id="Oe6-CY-VIc"/>
+                            <constraint firstItem="j2j-5D-nBr" firstAttribute="leading" secondItem="TwW-Go-Hwz" secondAttribute="leadingMargin" constant="10" id="av6-g1-HE9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="j2j-5D-nBr" secondAttribute="trailing" constant="10" id="eoM-J6-5sk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="piechart" destination="j2j-5D-nBr" id="uib-QZ-98M"/>
+                        <outlet property="testlabel" destination="YKE-s0-J7i" id="s2J-tc-GZB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jJK-Lk-mOf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

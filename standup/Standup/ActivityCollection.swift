@@ -13,9 +13,22 @@ class ActivityCollection {
     var activities = [Activity]()
     private let seconds_day_onepercent = 864.0;
     
+    
     init(){
         
     }
+    
+   
+    
+    
+    func dateWithFormat(dateformat format : dateFormats) -> String{
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = format.rawValue
+        let datestring = dateFormatter.stringFromDate(activities[0].startDateTime)
+        
+        return datestring
+    }
+    
     
     func clearActivities(){
         activities.removeAll()
@@ -54,15 +67,21 @@ class ActivityCollection {
         
         var totalTimeInSec = 0.0;
         
-        
-        
         for activity in activities {
-            if(activity.activityType == type){
+            if(activity.activityType == Activity.ActivityType.active){
                 totalTimeInSec = totalTimeInSec + activity.getTimeInteval()
             }
         }
         
-        let percentage = totalTimeInSec / seconds_day_onepercent;
-        return Int(percentage)
+        let rawpercentage = totalTimeInSec / seconds_day_onepercent;
+        let percentage =  Int(rawpercentage)
+        
+        if(type == Activity.ActivityType.active){
+            return percentage
+        }
+        else{
+            return 100 - percentage
+        }
+        
     }
 }
