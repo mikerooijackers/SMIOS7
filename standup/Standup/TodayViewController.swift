@@ -31,12 +31,12 @@ class TodayViewController : UIViewController{
         let date = NSDate()
         endDate = NSDate()
         let today = calander.components([.Year, .Month, .Day], fromDate: date)
-        today.day = 7
+        today.day = 8
         today.hour = 0
         today.minute = 0
         today.second = 1
         let todayEnd = calander.components([.Year, .Month, .Day], fromDate: date)
-        todayEnd.day = 7
+        todayEnd.day = 8
         todayEnd.hour = 23;
         todayEnd.minute = 59;
         todayEnd.second = 59;

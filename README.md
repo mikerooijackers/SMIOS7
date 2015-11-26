@@ -34,6 +34,9 @@ Merge conflicten op gelost.
 ## Week 5
 Connectie naar database werkt en gegevens ophalen lukt.
 Maps met userlocatie werkt ook. 
-Collectionview werkt
+View getekend waar de waardes op getekend worden die opgehaald worden uit healthkit.
 
 ## Week 6
+Push naar database is gelukt.
+Webview, javascript > swift en swift > javascript communicatie voorbeeld gemaakt.
+UICollectionview gemaakt.

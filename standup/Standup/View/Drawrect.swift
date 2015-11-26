@@ -52,8 +52,8 @@ public class DrawRect : UIView{
             
             let rect = CGRect(x: 0, y: oclockHeight, width: 10.0, height: 3.0)
             //rects.append(rectangle)
-            CGContextSetRGBFillColor(context, 0, 0, 0, 1.0);
-            CGContextSetRGBStrokeColor(context, 0, 0, 0, 40.0);
+            CGContextSetRGBFillColor(context, CGFloat(i * 10), 0, CGFloat(i * 10), 1.0);
+            CGContextSetRGBStrokeColor(context, CGFloat(i * 10), 0, CGFloat(i * 10), 40.0);
             CGContextFillRect(context, rect);
         }
         
