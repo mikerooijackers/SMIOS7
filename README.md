@@ -30,3 +30,10 @@ Facebook moesten we whitelisten om dit te kunnen gebruiken.
 Facebook login werkt met automatische controlen en doorverwijzing naar tableview
 Healtykit hebben we toegang tot gekregen
 Merge conflicten op gelost.
+
+## Week 5
+Connectie naar database werkt en gegevens ophalen lukt.
+Maps met userlocatie werkt ook. 
+Collectionview werkt
+
+## Week 6
