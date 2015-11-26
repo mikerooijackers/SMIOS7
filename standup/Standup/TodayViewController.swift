@@ -83,11 +83,6 @@ class TodayViewController : UIViewController{
         }
     }
     
-    
-    
-    
-    
-    
     func setChart(dataPoints: [String], values: [Int]) {
         
         var colors: [UIColor] = []
