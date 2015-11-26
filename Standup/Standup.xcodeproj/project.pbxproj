@@ -11,7 +11,7 @@
 		0B206B7E1BF35FB100AAD6AB /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B206B7B1BF35FB100AAD6AB /* FBSDKLoginKit.framework */; };
 		0B206B7F1BF35FB100AAD6AB /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B206B7C1BF35FB100AAD6AB /* FBSDKShareKit.framework */; };
 		0B9C6D8D1BFDC62E00DE74B5 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5FC87391BF35530003DCDDE /* HealthKit.framework */; };
-		0B9C6DF11BFDE7FC00DE74B5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9C6DE41BFDE7CC00DE74B5 /* Alamofire.framework */; };
+		0B9C6DF11BFDE7FC00DE74B5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9C6DE41BFDE7CC00DE74B5 /* Alamofire.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		0B9C6DF21BFDE7FC00DE74B5 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9C6DE41BFDE7CC00DE74B5 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0B9C6DF51BFDF2E300DE74B5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9C6DE41BFDE7CC00DE74B5 /* Alamofire.framework */; };
 		0B9C6DF61BFDF2E900DE74B5 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F50CE73D1BD506FF0048B5A0 /* Charts.framework */; };
@@ -414,7 +414,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0BDD8F791BD4CDFE0095FCE9 /* Build configuration list for PBXProject "Standup" */;
+			buildConfigurationList = 0BDD8F791BD4CDFE0095FCE9 /* Build configuration list for PBXProject "standup" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -775,7 +775,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0BDD8F791BD4CDFE0095FCE9 /* Build configuration list for PBXProject "Standup" */ = {
+		0BDD8F791BD4CDFE0095FCE9 /* Build configuration list for PBXProject "standup" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0BDD8FA41BD4CDFE0095FCE9 /* Debug */,
