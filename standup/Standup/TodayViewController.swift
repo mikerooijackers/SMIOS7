@@ -9,6 +9,7 @@
 import UIKit;
 import Charts;
 import HealthKit;
+import Alamofire
 
 class TodayViewController : UIViewController{
     
@@ -20,6 +21,8 @@ class TodayViewController : UIViewController{
     let activities = ActivityCollection()
     let dateFormatter = NSDateFormatter()
     let healtkitManager : HealthKitManager = HealthKitManager();
+    
+    //var facebookID : String;
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,8 +51,6 @@ class TodayViewController : UIViewController{
         QueryToday()
         
     }
-    
-    
     
     func QueryToday(){
         healtkitManager.authorizeHealthKit { (success, error) -> Void in
@@ -106,10 +107,11 @@ class TodayViewController : UIViewController{
         pieChartView.descriptionText = "Overzicht actief / inactief"
         pieChartView.centerText = "Today,  \(dateFormatter.stringFromDate(startDate))"
         
-      
     }
     
-    
-    
+    /*func sendData(facebookID:String) {
+        print(facebookID)
+        Alamofire.request(Alamofire.Method.GET, "http://smios.mikerooijackers.nl/servicequery.php", parameters: ["facebookID": facebookID])
+    }*/
 }
 
